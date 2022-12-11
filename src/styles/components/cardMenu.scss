@@ -1,0 +1,19 @@
+@import '../global.scss';
+
+.cardMenu {
+  background-color: $background2;
+  display: table;
+  min-width: 65px;
+  height: 50px;
+  padding: 4px;
+  vertical-align: middle;
+  text-align: center;
+
+  .cardMenu__titulo{
+    color: $white;
+  }
+}
+
+.cardMenu:hover {  
+  background-color: $primario;
+}

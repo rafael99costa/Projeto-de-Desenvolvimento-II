@@ -1,0 +1,29 @@
+@import '../global.scss';
+
+.btn {
+  color: $white;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.btn--primario {
+  background-color: $primario;
+}
+
+.btn--secundario {
+  background-color: $black;
+  width: 200px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
