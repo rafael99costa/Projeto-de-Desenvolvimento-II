@@ -14,9 +14,12 @@ const CardPostagem = ({ post }) => {
   const [showModal, setShowModal] = useState(false);
   const [favorito, setFavorito] = useState(false);
   
-  const media_nota = () => {
-    setMediaNota(post.notas.map(n => n.nota).reduce((previousValue, currentValue) => previousValue + currentValue, 0) / post.notas.length);
-  };
+  useEffect(() => {
+    const media_nota = () => {
+      setMediaNota(post.notas.map(n => n.nota).reduce((previousValue, currentValue) => previousValue + currentValue, 0) / post.notas.length);
+    };    
+    media_nota();
+  }, [post])
 
   const favoriteButton = () => {
     setFavorito(!favorito);
@@ -39,7 +42,6 @@ const CardPostagem = ({ post }) => {
     if (fav.length > 0) {
       setFavorito(true);
     }
-    media_nota();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
