@@ -57,7 +57,7 @@ const FormularioPostagem = () => {
             <option value="python">Python</option>
             <option value="php">Php</option>
             <option value="kotlin">Kotlin</option>
-            <option value="go">Go</option>
+            <option value="golang">GoLang</option>
             <option value="ruby">Ruby</option>
             <option value="c">C</option>
             <option value="csharp">C#</option>

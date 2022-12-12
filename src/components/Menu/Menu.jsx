@@ -14,7 +14,7 @@ const Menu = () => {
         <Link to={`/categorias/python`}><CardMenu icone={pythonIcon} titulo="Python" /></Link>
         <Link to={`/categorias/php`}><CardMenu icone={phpIcon} titulo="Php" /></Link>
         <Link to={`/categorias/kotlin`}><CardMenu icone={kotlinIcon} titulo="Kotlin" /></Link>
-        <Link to={`/categorias/go`}><CardMenu icone={goIcon} titulo="Go" /></Link>
+        <Link to={`/categorias/golang`}><CardMenu icone={goIcon} titulo="GoLang" /></Link>
         <Link to={`/categorias/ruby`}><CardMenu icone={rubyIcon} titulo="Ruby" /></Link>
         <Link to={`/categorias/c`}><CardMenu icone={cIcon} titulo="C" /></Link>
         <Link to={`/categorias/csharp`}><CardMenu icone={cSharpIcon} titulo="C#" /></Link>
