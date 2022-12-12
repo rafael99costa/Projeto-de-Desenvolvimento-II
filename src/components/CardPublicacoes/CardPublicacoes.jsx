@@ -29,7 +29,7 @@ const CardPublicacoes = ({id, titulo, categoria, link, notas, usuario}) => {
           { notas.length > 0 ? mediaNota.toFixed(1) : 0 }/10
         </span>
         <span className="cardPublicacoes__botao">
-          <a href={link}><Button type="button">Acessar conteúdo</Button></a>
+          <a href={link} target="_blank" rel="noreferrer noopener"><Button type="button">Acessar conteúdo</Button></a>
         </span>
 
         <span className='cardPublicacoes__perfil'>

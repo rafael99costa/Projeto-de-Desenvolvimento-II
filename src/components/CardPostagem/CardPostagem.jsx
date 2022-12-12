@@ -69,7 +69,7 @@ const CardPostagem = ({ post }) => {
         </span>
 
         <span className="cardPostagem__botao">
-          <a href={post.link}><Button type="button">Acessar conteúdo</Button></a>
+          <a href={post.link} target="_blank" rel="noreferrer noopener"><Button type="button">Acessar conteúdo</Button></a>
         </span>
 
         <span className="cardPostagem__perfil">
