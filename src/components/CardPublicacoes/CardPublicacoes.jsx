@@ -9,15 +9,14 @@ const CardPublicacoes = ({id, titulo, categoria, link, notas, usuario}) => {
   const [mediaNota, setMediaNota] = useState(0);
   const linkUrl = useRef(titulo.toLowerCase().replace(/ /g, "-"));
 
-  const media_nota = () => {
-    setMediaNota(Object.values(notas).map(n => n.nota).reduce((previousValue, currentValue) => previousValue + currentValue, 0) / Object.values(notas).length);
-  };
-
-  // Fix - Disable the ESLint rule
+    // Fix - Disable the ESLint rule
   useEffect(() => {
+    const media_nota = () => {
+      setMediaNota(Object.values(notas).map(n => n.nota).reduce((previousValue, currentValue) => previousValue + currentValue, 0) / Object.values(notas).length);
+    };
     media_nota();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [notas]);
 
   return (
     <div className="cardPublicacoes">

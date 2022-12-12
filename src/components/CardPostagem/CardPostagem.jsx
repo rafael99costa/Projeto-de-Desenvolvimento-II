@@ -14,13 +14,6 @@ const CardPostagem = ({ post }) => {
   const [showModal, setShowModal] = useState(false);
   const [favorito, setFavorito] = useState(false);
   
-  useEffect(() => {
-    const media_nota = () => {
-      setMediaNota(post.notas.map(n => n.nota).reduce((previousValue, currentValue) => previousValue + currentValue, 0) / post.notas.length);
-    };    
-    media_nota();
-  }, [post])
-
   const favoriteButton = () => {
     setFavorito(!favorito);
     
@@ -38,12 +31,21 @@ const CardPostagem = ({ post }) => {
 
   // Fix - Disable the ESLint rule
   useEffect(() => {
-    const fav = post.favoritos.filter(element => element.id_pessoa === user.uid)
-    if (fav.length > 0) {
-      setFavorito(true);
+    if(user) {
+      const fav = post.favoritos.filter(element => element.id_pessoa === user.uid)
+      if (fav.length > 0) {
+        setFavorito(true);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    const media_nota = () => {
+      setMediaNota(post.notas.map(n => n.nota).reduce((previousValue, currentValue) => previousValue + currentValue, 0) / post.notas.length);
+    };    
+    media_nota();
+  }, [post]);
   
   return (
     <div className="cardPostagem" key={post.id}>

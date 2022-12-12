@@ -55,10 +55,10 @@ const FormularioPostagem = () => {
             <option value="typescript">Typescript</option>
             <option value="Java">Java</option>
             <option value="python">Python</option>
-            <option value="php">Php</option>            
+            <option value="php">Php</option>
             <option value="kotlin">Kotlin</option>
             <option value="go">Go</option>
-            <option value="roby">Ruby</option>
+            <option value="ruby">Ruby</option>
             <option value="c">C</option>
             <option value="csharp">C#</option>
             <option value="c++">C++</option>
